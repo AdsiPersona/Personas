@@ -60,7 +60,6 @@ public class EmpleadosModelo extends Conexion{
             
             Integer codigoR = codigoRol(Codi_Rol);
             
-            JOptionPane.showMessageDialog(null, codigoR);
             
             String sql = "insert into empleados(Documento , Codi_Rol, Fech_Nato, Email_Inst"
                    + " ) values('"+Documento+"',"+codigoR+",'"+Fech_Nato+"','"+Email_Inst+"');";

@@ -490,8 +490,8 @@ public class FrmEmpleados extends javax.swing.JFrame {
         int longitud = this.jTextDocumento.getText().length();
         
          
-        if (!Character.isDigit(c) || longitud >= 11) {
-            JOptionPane.showMessageDialog(jTextDocumento, "Solo son 11 digitos");
+        if (!Character.isDigit(c) || longitud >= 10) {
+            JOptionPane.showMessageDialog(jTextDocumento, "Solo son 10 digitos");
             evt.consume();
         }
         
@@ -557,8 +557,7 @@ public class FrmEmpleados extends javax.swing.JFrame {
         int longitud = this.jTextDocumento.getText().length();
         
         
-        if(longitud < 11){
-            JOptionPane.showMessageDialog(jTextDocumento, "Debe tener 11 Digitos");
+        if(longitud < 10){
         }
     }//GEN-LAST:event_jTextDocumentoFocusLost
 

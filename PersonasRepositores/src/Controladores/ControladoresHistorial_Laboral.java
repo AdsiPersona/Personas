@@ -8,13 +8,11 @@ package Controladores;
 
 import Modelos.HistoriaLaboralModelo;
 import Vista.FrmHistoriaLaboral;
-import static Vista.FrmHistoriaLaboral.jDateChooserFIngreso;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -126,10 +124,10 @@ public class ControladoresHistorial_Laboral implements ActionListener, MouseList
 //                this.vtnHistoriaLaboral.jTableHistoriaLaboral.requestFocus();
 //                break;
                 
-                this.vtnHistoriaLaboral.jLbDocumento.setVisible(true);
-                this.vtnHistoriaLaboral.jLblNombre.setVisible(true);
-                this.vtnHistoriaLaboral.jTextDocumento.setVisible(true);
-                this.vtnHistoriaLaboral.jTextNombre.setVisible(true);
+//                this.vtnHistoriaLaboral.jLbDocumento.setVisible(true);
+//                this.vtnHistoriaLaboral.jLblNombre.setVisible(true);
+//                this.vtnHistoriaLaboral.jTextDocumento.setVisible(true);
+//                this.vtnHistoriaLaboral.jTextNombre.setVisible(true);
                 
                 this.vtnHistoriaLaboral.jTableHistoriaLaboral.setModel(this.modelo.
                             getTablaHistorial(this.vtnHistoriaLaboral.jTextNombre.getText()));                                                         
@@ -138,18 +136,18 @@ public class ControladoresHistorial_Laboral implements ActionListener, MouseList
             }
             case __ADICIONAR_HISTORIAL:{
                 
-                     this.vtnHistoriaLaboral.jLbCodigoCargo.setVisible(true);
-                     this.vtnHistoriaLaboral.   jLbCodigoOficina.setVisible(true);
-                     this.vtnHistoriaLaboral.  jLbFechaIngreso.setVisible(true);
-                     this.vtnHistoriaLaboral.  jLbFechaIngreso.setVisible(true);
-                     this.vtnHistoriaLaboral.  jLbDocumento.setVisible(true);
-                     this.vtnHistoriaLaboral.  jLblNombre.setVisible(false);
-                     this.vtnHistoriaLaboral. jCbCodigoCargo.setVisible(true);
-                     this.vtnHistoriaLaboral. jCbCodigoOficina.setVisible(true);
-                     this.vtnHistoriaLaboral. jDateChooserFEgreso.setVisible(true);
-                     this.vtnHistoriaLaboral.  jDateChooserFIngreso.setVisible(true);
-                     this.vtnHistoriaLaboral. jTextDocumento.setVisible(true);
-                     this.vtnHistoriaLaboral. jTextNombre.setVisible(false); 
+//                     this.vtnHistoriaLaboral.jLbCodigoCargo.setVisible(true);
+//                     this.vtnHistoriaLaboral.   jLbCodigoOficina.setVisible(true);
+//                     this.vtnHistoriaLaboral.  jLbFechaIngreso.setVisible(true);
+//                     this.vtnHistoriaLaboral.  jLbFechaIngreso.setVisible(true);
+//                     this.vtnHistoriaLaboral.  jLbDocumento.setVisible(true);
+//                     this.vtnHistoriaLaboral.  jLblNombre.setVisible(false);
+//                     this.vtnHistoriaLaboral. jCbCodigoCargo.setVisible(true);
+//                     this.vtnHistoriaLaboral. jCbCodigoOficina.setVisible(true);
+//                     this.vtnHistoriaLaboral. jDateChooserFEgreso.setVisible(true);
+//                     this.vtnHistoriaLaboral.  jDateChooserFIngreso.setVisible(true);
+//                     this.vtnHistoriaLaboral. jTextDocumento.setVisible(true);
+//                     this.vtnHistoriaLaboral. jTextNombre.setVisible(false); 
                 
                 
                 
@@ -170,30 +168,30 @@ public class ControladoresHistorial_Laboral implements ActionListener, MouseList
             }
             case __AGREGAR_HISTORIAL:{  
                 
-                 Date fecha1,fecha2;
-                     fecha1 = this.vtnHistoriaLaboral.jDateChooserFIngreso.getDate();
-                     fecha2 = this.vtnHistoriaLaboral.jDateChooserFEgreso.getDate();
-        
-        
-        
-        
-                if (fecha2.after(fecha1)){
-                    JOptionPane.showMessageDialog(null, "La fecha no debe ser posterior a la de hoy!! ");    
-                    this.vtnHistoriaLaboral.jDateChooserFIngreso.setDate(null);
-                    this.vtnHistoriaLaboral.jDateChooserFIngreso.requestFocus();
-
-
-                
-                }
-                
-                this.vtnHistoriaLaboral.jLbCodigoCargo.setVisible(false);
-                this.vtnHistoriaLaboral.jLbCodigoOficina.setVisible(false);
-                this.vtnHistoriaLaboral.jLbFechaIngreso.setVisible(false);
-                this.vtnHistoriaLaboral.jLbFechaEgreso.setVisible(false);
-                this.vtnHistoriaLaboral.jCbCodigoCargo.setVisible(false);
-                this.vtnHistoriaLaboral.jCbCodigoOficina.setVisible(false);
-                this.vtnHistoriaLaboral.jDateChooserFEgreso.setVisible(false);
-                this.vtnHistoriaLaboral.jDateChooserFIngreso.setVisible(false);
+//                 Date fecha1,fecha2;
+//                     fecha1 = this.vtnHistoriaLaboral.jDateChooserFIngreso.getDate();
+//                     fecha2 = this.vtnHistoriaLaboral.jDateChooserFEgreso.getDate();
+//        
+//        
+//        
+//        
+////                if (fecha2.after(fecha1)){
+////                    JOptionPane.showMessageDialog(null, "La fecha no debe ser posterior a la de hoy!! ");    
+////                    this.vtnHistoriaLaboral.jDateChooserFIngreso.setDate(null);
+////                    this.vtnHistoriaLaboral.jDateChooserFIngreso.requestFocus();
+////
+////
+////                
+////                }
+//                
+//                this.vtnHistoriaLaboral.jLbCodigoCargo.setVisible(false);
+//                this.vtnHistoriaLaboral.jLbCodigoOficina.setVisible(false);
+//                this.vtnHistoriaLaboral.jLbFechaIngreso.setVisible(false);
+//                this.vtnHistoriaLaboral.jLbFechaEgreso.setVisible(false);
+//                this.vtnHistoriaLaboral.jCbCodigoCargo.setVisible(false);
+//                this.vtnHistoriaLaboral.jCbCodigoOficina.setVisible(false);
+//                this.vtnHistoriaLaboral.jDateChooserFEgreso.setVisible(false);
+//                this.vtnHistoriaLaboral.jDateChooserFIngreso.setVisible(false);
                 
                     
                 

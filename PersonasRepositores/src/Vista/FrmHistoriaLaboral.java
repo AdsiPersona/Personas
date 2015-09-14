@@ -290,26 +290,30 @@ public class FrmHistoriaLaboral extends javax.swing.JFrame {
 
     private void jTextDocumentoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextDocumentoKeyTyped
         // TODO add your handling code here:
-           char c = evt.getKeyChar();
+        char c = evt.getKeyChar();
+           
         if (c < '0' || c > '9') {
             evt.consume();
         }
 
         String cadena = jTextDocumento.getText();
-        if (cadena.length() >= 11) {
+        if (cadena.length() >= 10) {
             evt.consume();
         }
+        
 
     }//GEN-LAST:event_jTextDocumentoKeyTyped
 
     private void jTextDocumentoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextDocumentoFocusLost
         // TODO add your handling code here:
+ 
          int longitud = this.jTextDocumento.getText().length();
         
         
         if(longitud < 10){
            JOptionPane.showMessageDialog(jTextDocumento,"Debe Tener 10 Digitos");
         }
+     
     }//GEN-LAST:event_jTextDocumentoFocusLost
 
     /**
@@ -355,7 +359,7 @@ public class FrmHistoriaLaboral extends javax.swing.JFrame {
     public javax.swing.JComboBox jCbCodigoCargo;
     public javax.swing.JComboBox jCbCodigoOficina;
     public com.toedter.calendar.JDateChooser jDateChooserFEgreso;
-    public static com.toedter.calendar.JDateChooser jDateChooserFIngreso;
+    public com.toedter.calendar.JDateChooser jDateChooserFIngreso;
     public javax.swing.JLabel jLbCodigoCargo;
     public javax.swing.JLabel jLbCodigoOficina;
     public javax.swing.JLabel jLbDocumento;
