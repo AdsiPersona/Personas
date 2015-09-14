@@ -172,17 +172,14 @@ public class ControladoresHistorial_Laboral implements ActionListener, MouseList
 //                     fecha1 = this.vtnHistoriaLaboral.jDateChooserFIngreso.getDate();
 //                     fecha2 = this.vtnHistoriaLaboral.jDateChooserFEgreso.getDate();
 //        
-//        
-//        
-//        
-////                if (fecha2.after(fecha1)){
-////                    JOptionPane.showMessageDialog(null, "La fecha no debe ser posterior a la de hoy!! ");    
-////                    this.vtnHistoriaLaboral.jDateChooserFIngreso.setDate(null);
-////                    this.vtnHistoriaLaboral.jDateChooserFIngreso.requestFocus();
-////
-////
-////                
-////                }
+//                if (fecha2.after(fecha1)){
+//                    JOptionPane.showMessageDialog(null, "La fecha no debe ser posterior a la de hoy!! ");    
+//                    this.vtnHistoriaLaboral.jDateChooserFIngreso.setDate(null);
+//                    this.vtnHistoriaLaboral.jDateChooserFIngreso.requestFocus();
+//
+//
+//                
+//                }
 //                
 //                this.vtnHistoriaLaboral.jLbCodigoCargo.setVisible(false);
 //                this.vtnHistoriaLaboral.jLbCodigoOficina.setVisible(false);
@@ -206,7 +203,7 @@ public class ControladoresHistorial_Laboral implements ActionListener, MouseList
                 JOptionPane.showMessageDialog(vtnHistoriaLaboral, "Historial  Creado!.");
                 this.vtnHistoriaLaboral.jTextDocumento.setText("");
                 this.vtnHistoriaLaboral.jTextNombre.setText("");
-//                this.vtnHistoriaLaboral.jDateChooserFIngreso.setDate("");
+                this.vtnHistoriaLaboral.jDateChooserFIngreso.setDateFormatString("");
                 this.vtnHistoriaLaboral.jCbCodigoCargo.setSelectedItem("");
                 this.vtnHistoriaLaboral.jCbCodigoOficina.setSelectedItem("");
                 this.vtnHistoriaLaboral.jDateChooserFEgreso.setDateFormatString("");
