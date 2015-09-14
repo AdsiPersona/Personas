@@ -222,7 +222,7 @@ public class HistoriaLaboralModelo extends Conexion{
         String oficina = "";
         
         String sql = "select Codi_Ofic from oficinas where Nomb_Ofic ) = '"
-                +Nomb_Ofic+"';" ;
+                +Nomb_Ofic+"';";
         
         JOptionPane.showMessageDialog(null, "Sentencia sql: "+sql);
         
@@ -243,8 +243,9 @@ public class HistoriaLaboralModelo extends Conexion{
         }
 
         public String[] LlenarComboBoxOficina(){
-        String SQL = "Select Codi_Ofic From oficinas;";
         int i = 0;
+        String SQL = "Select Codi_Ofic From oficinas;";
+        
 
         try {
             PreparedStatement Sentencia = this.getConexion().prepareStatement(SQL);
@@ -258,7 +259,7 @@ public class HistoriaLaboralModelo extends Conexion{
 
         String[] Combo = new String[i];
 
-        SQL = "Select Nomb_Ofic From oficinas order by Codi_Ofic;";
+       SQL = "Select Nomb_Ofic From oficinas order by Codi_Ofic;";
 
         try {
             PreparedStatement Sentencia = this.getConexion().prepareStatement(SQL);

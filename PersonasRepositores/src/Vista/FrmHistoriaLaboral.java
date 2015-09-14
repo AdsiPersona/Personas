@@ -96,13 +96,13 @@ public class FrmHistoriaLaboral extends javax.swing.JFrame {
         jLbFechaEgreso = new javax.swing.JLabel();
         jLbCodigoCargo = new javax.swing.JLabel();
         jLbCodigoOficina = new javax.swing.JLabel();
-        jCbCodigoOficina = new javax.swing.JComboBox();
         jLblNombre = new javax.swing.JLabel();
         jTextNombre = new javax.swing.JTextField();
-        jCbCodigoCargo = new javax.swing.JComboBox();
         jTextDocumento = new javax.swing.JTextField();
         jDateChooserFEgreso = new com.toedter.calendar.JDateChooser();
         jDateChooserFIngreso = new com.toedter.calendar.JDateChooser();
+        jCbCodigoCargo = new javax.swing.JComboBox();
+        jCbCodigoOficina = new javax.swing.JComboBox();
 
         jScrollPane1.setViewportView(jTextPane1);
 
@@ -187,19 +187,11 @@ public class FrmHistoriaLaboral extends javax.swing.JFrame {
         getContentPane().add(jLbCodigoOficina);
         jLbCodigoOficina.setBounds(350, 44, 40, 14);
 
-        jCbCodigoOficina.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Tesorería", "Coordinación De Crédito", "Secretaría", "Dirección", "Coordinación Académica", "Coordinación Del Programa", "Coordinación De Calidad", "Enfermería", "Coordinación De Sistemas", "Coordinación Vinculación Laboral", "Biblioteca", "Pastoral", "Psicología", "Monitores De Sistemas", "Servicios Generales", "Coordinación De Talleres", "Sala de Profesores", "Portería" }));
-        getContentPane().add(jCbCodigoOficina);
-        jCbCodigoOficina.setBounds(447, 41, 180, 20);
-
         jLblNombre.setText("Nombre: ");
         getContentPane().add(jLblNombre);
         jLblNombre.setBounds(350, 21, 80, 14);
         getContentPane().add(jTextNombre);
         jTextNombre.setBounds(447, 11, 180, 20);
-
-        jCbCodigoCargo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Tesorera", "Coordinador De Crédito", "Secretaria", "Director", "Coordinador Académico", "Coordinador De Programa", "Coordinador De Calidad", "Enfermera", "Coordinador De Sistemas", "Coordinador Vinculación Laboral", "Bibliotecaria", "Pastoral", "Psicóloga", "Monitores De Sistemas", "Servicios Generales", "Coordinador De Talleres", "Instructores", "Profesores", "Vigilancia" }));
-        getContentPane().add(jCbCodigoCargo);
-        jCbCodigoCargo.setBounds(103, 41, 177, 20);
 
         jTextDocumento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -223,6 +215,12 @@ public class FrmHistoriaLaboral extends javax.swing.JFrame {
         getContentPane().add(jDateChooserFIngreso);
         jDateChooserFIngreso.setBounds(120, 70, 170, 20);
 
+        getContentPane().add(jCbCodigoCargo);
+        jCbCodigoCargo.setBounds(110, 40, 170, 20);
+
+        getContentPane().add(jCbCodigoOficina);
+        jCbCodigoOficina.setBounds(450, 40, 170, 20);
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -237,15 +235,13 @@ public class FrmHistoriaLaboral extends javax.swing.JFrame {
         jLbFechaEgreso.setVisible(true);
         jLbFechaIngreso.setVisible(true);
         jLbDocumento.setVisible(true);
-        jLblNombre.setVisible(true);
+        jLblNombre.setVisible(false);
         jCbCodigoCargo.setVisible(true);
         jCbCodigoOficina.setVisible(true);
         jDateChooserFEgreso.setVisible(true);
         jDateChooserFIngreso.setVisible(true);
         jTextDocumento.setVisible(true);
-        jTextNombre.setVisible(true);
-        
-        
+        jTextNombre.setVisible(false);       
         this.habilitarMenu();
     }//GEN-LAST:event_jBtnAdicionarHistorialActionPerformed
 
@@ -311,8 +307,8 @@ public class FrmHistoriaLaboral extends javax.swing.JFrame {
          int longitud = this.jTextDocumento.getText().length();
         
         
-        if(longitud < 11){
-           JOptionPane.showMessageDialog(jTextDocumento, "Debe tener 11 Digitos");
+        if(longitud < 10){
+           JOptionPane.showMessageDialog(jTextDocumento,"Debe Tener 10 Digitos");
         }
     }//GEN-LAST:event_jTextDocumentoFocusLost
 

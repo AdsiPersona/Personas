@@ -194,40 +194,6 @@
         </Constraint>
       </Constraints>
     </Component>
-    <Component class="javax.swing.JComboBox" name="jCbCodigoOficina">
-      <Properties>
-        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="18">
-            <StringItem index="0" value="Tesorer&#xed;a"/>
-            <StringItem index="1" value="Coordinaci&#xf3;n De Cr&#xe9;dito"/>
-            <StringItem index="2" value="Secretar&#xed;a"/>
-            <StringItem index="3" value="Direcci&#xf3;n"/>
-            <StringItem index="4" value="Coordinaci&#xf3;n Acad&#xe9;mica"/>
-            <StringItem index="5" value="Coordinaci&#xf3;n Del Programa"/>
-            <StringItem index="6" value="Coordinaci&#xf3;n De Calidad"/>
-            <StringItem index="7" value="Enfermer&#xed;a"/>
-            <StringItem index="8" value="Coordinaci&#xf3;n De Sistemas"/>
-            <StringItem index="9" value="Coordinaci&#xf3;n Vinculaci&#xf3;n Laboral"/>
-            <StringItem index="10" value="Biblioteca"/>
-            <StringItem index="11" value="Pastoral"/>
-            <StringItem index="12" value="Psicolog&#xed;a"/>
-            <StringItem index="13" value="Monitores De Sistemas"/>
-            <StringItem index="14" value="Servicios Generales"/>
-            <StringItem index="15" value="Coordinaci&#xf3;n De Talleres"/>
-            <StringItem index="16" value="Sala de Profesores"/>
-            <StringItem index="17" value="Porter&#xed;a"/>
-          </StringArray>
-        </Property>
-      </Properties>
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
-      </AuxValues>
-      <Constraints>
-        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="447" y="41" width="-1" height="-1"/>
-        </Constraint>
-      </Constraints>
-    </Component>
     <Component class="javax.swing.JLabel" name="jLblNombre">
       <Properties>
         <Property name="text" type="java.lang.String" value="Nombre: "/>
@@ -248,41 +214,6 @@
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="447" y="11" width="180" height="-1"/>
-        </Constraint>
-      </Constraints>
-    </Component>
-    <Component class="javax.swing.JComboBox" name="jCbCodigoCargo">
-      <Properties>
-        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="19">
-            <StringItem index="0" value="Tesorera"/>
-            <StringItem index="1" value="Coordinador De Cr&#xe9;dito"/>
-            <StringItem index="2" value="Secretaria"/>
-            <StringItem index="3" value="Director"/>
-            <StringItem index="4" value="Coordinador Acad&#xe9;mico"/>
-            <StringItem index="5" value="Coordinador De Programa"/>
-            <StringItem index="6" value="Coordinador De Calidad"/>
-            <StringItem index="7" value="Enfermera"/>
-            <StringItem index="8" value="Coordinador De Sistemas"/>
-            <StringItem index="9" value="Coordinador Vinculaci&#xf3;n Laboral"/>
-            <StringItem index="10" value="Bibliotecaria"/>
-            <StringItem index="11" value="Pastoral"/>
-            <StringItem index="12" value="Psic&#xf3;loga"/>
-            <StringItem index="13" value="Monitores De Sistemas"/>
-            <StringItem index="14" value="Servicios Generales"/>
-            <StringItem index="15" value="Coordinador De Talleres"/>
-            <StringItem index="16" value="Instructores"/>
-            <StringItem index="17" value="Profesores"/>
-            <StringItem index="18" value="Vigilancia"/>
-          </StringArray>
-        </Property>
-      </Properties>
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
-      </AuxValues>
-      <Constraints>
-        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="103" y="41" width="-1" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -318,6 +249,36 @@
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
           <AbsoluteConstraints x="120" y="70" width="170" height="-1"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="jCbCodigoCargo">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="0"/>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="110" y="40" width="170" height="-1"/>
+        </Constraint>
+      </Constraints>
+    </Component>
+    <Component class="javax.swing.JComboBox" name="jCbCodigoOficina">
+      <Properties>
+        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+          <StringArray count="0"/>
+        </Property>
+      </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
+      <Constraints>
+        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+          <AbsoluteConstraints x="450" y="40" width="170" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>

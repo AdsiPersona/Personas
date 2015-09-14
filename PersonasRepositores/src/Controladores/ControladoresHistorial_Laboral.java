@@ -42,8 +42,11 @@ public class ControladoresHistorial_Laboral implements ActionListener, MouseList
         }        
         return null;
     }
+    
     public ControladoresHistorial_Laboral(FrmHistoriaLaboral vista){
         this.vtnHistoriaLaboral = vista;
+        this.llenarCbCargos(this.modelo.LlenarComboBoxCargos());
+        this.llenarCbOficinas(this.modelo.LlenarComboBoxOficina());
       }
 
     
@@ -176,6 +179,18 @@ public class ControladoresHistorial_Laboral implements ActionListener, MouseList
             this.vtnHistoriaLaboral.jTextNombre.setText(this.modelo.TraerNombre(this.vtnHistoriaLaboral.jTextDocumento.getText()));
           break;
            }
+        }
+    }
+    
+    private void llenarCbCargos(String[] arreglo){
+        for (int i = 0; i < arreglo.length; i++) {
+            this.vtnHistoriaLaboral.jCbCodigoCargo.addItem(arreglo[i]);            
+        }
+    }
+    
+      private void llenarCbOficinas(String[] arreglo){
+        for (int i = 0; i < arreglo.length; i++) {
+            this.vtnHistoriaLaboral.jCbCodigoCargo.addItem(arreglo[i]);            
         }
     }
 }
