@@ -355,11 +355,11 @@ public class FrmHistoriaLaboral extends javax.swing.JFrame {
     public javax.swing.JComboBox jCbCodigoCargo;
     public javax.swing.JComboBox jCbCodigoOficina;
     public com.toedter.calendar.JDateChooser jDateChooserFEgreso;
-    public com.toedter.calendar.JDateChooser jDateChooserFIngreso;
+    public static com.toedter.calendar.JDateChooser jDateChooserFIngreso;
     public javax.swing.JLabel jLbCodigoCargo;
     public javax.swing.JLabel jLbCodigoOficina;
-    private javax.swing.JLabel jLbDocumento;
-    private javax.swing.JLabel jLbFechaEgreso;
+    public javax.swing.JLabel jLbDocumento;
+    public javax.swing.JLabel jLbFechaEgreso;
     public javax.swing.JLabel jLbFechaIngreso;
     public javax.swing.JLabel jLblNombre;
     private javax.swing.JScrollPane jScrollPane1;
