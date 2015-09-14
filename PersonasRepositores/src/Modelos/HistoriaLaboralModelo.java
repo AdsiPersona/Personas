@@ -167,7 +167,7 @@ public class HistoriaLaboralModelo extends Conexion{
         return cargos;
     }
 
-        public String[] LlenarComboBoxCargos(){
+    public String[] LlenarComboBoxCargos(){
         String SQL = "Select Codi_Carg From cargos;";
         int i = 0;
 
@@ -201,7 +201,7 @@ public class HistoriaLaboralModelo extends Conexion{
     }
     
         
-        public String codigoOficina(String Nomb_Ofic){
+    public String codigoOficina(String Nomb_Ofic){
             /**
         String oficina = "";
         
@@ -219,10 +219,13 @@ public class HistoriaLaboralModelo extends Conexion{
         }                
         return oficina;
         * */            
-            String oficina = "";
+        String oficina = "";
         
-        String sql = "select Codi_Ofic from oficinas where Nomb_Ofic='"
+        String sql = "select Codi_Ofic from oficinas where Nomb_Ofic ) = '"
                 +Nomb_Ofic+"';" ;
+        
+        JOptionPane.showMessageDialog(null, "Sentencia sql: "+sql);
+        
         try{
             PreparedStatement sentencia = this.getConexion().prepareStatement(sql);
             ResultSet resultado = sentencia.executeQuery();         
@@ -232,7 +235,10 @@ public class HistoriaLaboralModelo extends Conexion{
             resultado.close();
          }catch(SQLException e){
             JOptionPane.showMessageDialog(null, e.getMessage());
-        }                
+        }         
+        
+        JOptionPane.showMessageDialog(null, "Código retornado: "+oficina);
+        
         return oficina;
         }
 
