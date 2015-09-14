@@ -190,7 +190,7 @@ public class ControladoresHistorial_Laboral implements ActionListener, MouseList
     
       private void llenarCbOficinas(String[] arreglo){
         for (int i = 0; i < arreglo.length; i++) {
-            this.vtnHistoriaLaboral.jCbCodigoCargo.addItem(arreglo[i]);            
+            this.vtnHistoriaLaboral.jCbCodigoOficina.addItem(arreglo[i]);            
         }
     }
 }
