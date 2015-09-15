@@ -227,28 +227,30 @@ public class FrmHistoriaLaboral extends javax.swing.JFrame {
         jLbFechaEgreso.setVisible(true);
         jLbFechaIngreso.setVisible(true);
         jLbDocumento.setVisible(true);
-        jLblNombre.setVisible(true);
+        jLblNombre.setEnabled(true);
         jCbCodigoCargo.setVisible(true);
         jCbCodigoOficina.setVisible(true);
         jDateChooserFEgreso.setVisible(true);
         jDateChooserFIngreso.setVisible(true);
         jTextDocumento.setVisible(true);
         jTextNombre.setVisible(true);  
+        jBtnVerHisorial.setVisible(true);
         jBtnVerHisorial.setEnabled(false);
-//        jBtnAgregarHistorial.setEnabled(true);
+        jBtnAgregarHistorial.setEnabled(false);
+        jBtnAgregarHistorial.setVisible(true);
         this.habilitarMenu();
     }//GEN-LAST:event_jBtnAdicionarHistorialActionPerformed
 
     private void jBtnAgregarHistorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnAgregarHistorialActionPerformed
         // TODO add your handling code here:
-        jLbCodigoCargo.setVisible(false);
-        jLbCodigoOficina.setVisible(false);
-        jLbFechaIngreso.setVisible(false);
-        jLbFechaEgreso.setVisible(false);
-        jCbCodigoCargo.setVisible(false);
-        jCbCodigoOficina.setVisible(false);
-        jDateChooserFEgreso.setVisible(false);
-        jDateChooserFIngreso.setVisible(false);
+        jLbCodigoCargo.setEnabled(false);
+        jLbCodigoOficina.setEnabled(false);
+        jLbFechaIngreso.setEnabled(false);
+        jLbFechaEgreso.setEnabled(false);
+        jCbCodigoCargo.setEnabled(false);
+        jCbCodigoOficina.setEnabled(false);
+        jDateChooserFEgreso.setEnabled(false);
+        jDateChooserFIngreso.setEnabled(false);
         //jBtnAgregarHistorial.setEnabled(false);
         jBtnAdicionarHistorial.setEnabled(false);
         this.deshabilitarMenu();
@@ -256,10 +258,10 @@ public class FrmHistoriaLaboral extends javax.swing.JFrame {
 
     private void jBtnVerHisorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnVerHisorialActionPerformed
         // TODO add your handling code here:
-        jLbDocumento.setVisible(true);
-        jLblNombre.setVisible(true);
-        jTextDocumento.setVisible(true);
-        jTextNombre.setVisible(true);
+        jLbDocumento.setEnabled(true);
+        jLblNombre.setEnabled(true);
+        jTextDocumento.setEnabled(true);
+        jTextNombre.setEnabled(false);
         jBtnAdicionarHistorial.setEnabled(true);
         
     }//GEN-LAST:event_jBtnVerHisorialActionPerformed
@@ -275,12 +277,12 @@ public class FrmHistoriaLaboral extends javax.swing.JFrame {
         jDateChooserFEgreso.setVisible(false);
         jDateChooserFIngreso.setVisible(false);
 //        jLbDocumento.setVisible(false);
-        jLblNombre.setVisible(true);
+        jLblNombre.setEnabled(true);
 //        jTextDocumento.setVisible(false);
         jTextNombre.setEnabled(false);
-        jBtnVerHisorial.setEnabled(true);
+        jBtnVerHisorial.setVisible(true);
         jBtnAdicionarHistorial.setEnabled(false);
-        jBtnAgregarHistorial.setEnabled(false);
+        jBtnAgregarHistorial.setVisible(false);
         this.deshabilitarMenu();
         
     }//GEN-LAST:event_formWindowOpened
@@ -320,8 +322,8 @@ public class FrmHistoriaLaboral extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextDocumentoFocusLost
 
     private void jBtnAgregarHistorialMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBtnAgregarHistorialMouseEntered
-        // TODO add your handling code here:
-        if(jTextDocumento.getText().length() > 0 && jDateChooserFIngreso.getDate().toString().length() > 0){
+        // TODO add your handling code here:        
+        if(jTextDocumento.getText().length() > 0 && jDateChooserFIngreso.getDate().toString().equals("null")){
             this.jBtnAgregarHistorial.setEnabled(true);
         }
     }//GEN-LAST:event_jBtnAgregarHistorialMouseEntered
