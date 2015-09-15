@@ -209,17 +209,17 @@ public class FrmHistoriaLaboral extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextDocumento);
-        jTextDocumento.setBounds(103, 11, 177, 20);
+        jTextDocumento.setBounds(120, 10, 170, 20);
         getContentPane().add(jDateChooserFEgreso);
-        jDateChooserFEgreso.setBounds(480, 70, 140, 20);
+        jDateChooserFEgreso.setBounds(450, 70, 170, 20);
         getContentPane().add(jDateChooserFIngreso);
         jDateChooserFIngreso.setBounds(120, 70, 170, 20);
 
         getContentPane().add(jCbCodigoCargo);
-        jCbCodigoCargo.setBounds(110, 40, 170, 20);
+        jCbCodigoCargo.setBounds(120, 40, 170, 20);
 
         getContentPane().add(jCbCodigoOficina);
-        jCbCodigoOficina.setBounds(450, 40, 170, 20);
+        jCbCodigoOficina.setBounds(450, 40, 180, 20);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

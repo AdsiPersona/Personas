@@ -76,10 +76,10 @@ public class HistoriaLaboralModelo extends Conexion{
             JOptionPane.showMessageDialog(null, e.getMessage());
         }
    
-        Object[][] data = new String[registros][4];
+        Object[][] data = new String[registros][5];
         try {
-            PreparedStatement pstm = this.getConexion().prepareStatement("SELECT * "
-            + " FROM historial_laboral                                                                                                                                   ;");
+            String sql =  "SELECT * FROM historial_laboral;";
+            PreparedStatement pstm = this.getConexion().prepareStatement(sql);
             ResultSet resultado = pstm.executeQuery();
             int i = 0;
             while(resultado.next()){
@@ -104,10 +104,10 @@ public class HistoriaLaboralModelo extends Conexion{
             String CodigoO = codigoOficina(Nom_Ofic);
             
             String sql;
-            if (Fech_Egre==null){
+            if (Fech_Egre == null){
                 sql = "insert into historial_laboral(Documento, Fech_Ingr, Codi_Carg, Codi_Ofic ) values('"+Documento+"','"+Fech_Ingr+"','"+CodigoC+"','"+CodigoO+"');";
             }else{
-                sql = "insert into historial_laboral(Documento, Fech_Ingr, Codi_Carg, Codi_Ofic, Fech_Egre ) values('"+Documento+"','"+Fech_Ingr+"','"+CodigoC+"','"+CodigoO+"','"+Fech_Egre+"');";
+                sql = "insert into historial_laboral(Documento, Fech_Ingr, Codi_Carg, Codi_Ofic, Fech_Egre) values('"+Documento+"','"+Fech_Ingr+"','"+CodigoC+"','"+CodigoO+"','"+Fech_Egre+"');";
             }
             
             System.out.println(sql);
@@ -221,7 +221,7 @@ public class HistoriaLaboralModelo extends Conexion{
         * */            
         String oficina = "";
         
-        String sql = "select Codi_Ofic from oficinas where Nomb_Ofic ) = '"
+        String sql = "select Codi_Ofic from oficinas where Nomb_Ofic = '"
                 +Nomb_Ofic+"';";
         
         JOptionPane.showMessageDialog(null, "Sentencia sql: "+sql);
