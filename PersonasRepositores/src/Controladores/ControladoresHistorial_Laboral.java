@@ -28,7 +28,7 @@ public class ControladoresHistorial_Laboral implements ActionListener, MouseList
     public enum AccionMVC{
         __VER_HISTORIAL,
         __AGREGAR_HISTORIAL,
-        __ELIMINAR_HISTORIAL,
+//        __ELIMINAR_HISTORIAL,
         __ADICIONAR_HISTORIAL,
         __NOMBRE
     } 
@@ -73,8 +73,8 @@ public class ControladoresHistorial_Laboral implements ActionListener, MouseList
         this.vtnHistoriaLaboral.jBtnAgregarHistorial.setActionCommand("__AGREGAR_HISTORIAL");
         this.vtnHistoriaLaboral.jBtnAgregarHistorial.addActionListener(this);
         
-        this.vtnHistoriaLaboral.jBtnEliminarHistorial.setActionCommand("__ELIMINAR_HISTORIAL");
-        this.vtnHistoriaLaboral.jBtnEliminarHistorial.addActionListener(this);
+//        this.vtnHistoriaLaboral.jBtnEliminarHistorial.setActionCommand("__ELIMINAR_HISTORIAL");
+//        this.vtnHistoriaLaboral.jBtnEliminarHistorial.addActionListener(this);
         
         this.vtnHistoriaLaboral.jTextDocumento.setActionCommand("__NOMBRE");
         this.vtnHistoriaLaboral.jTextDocumento.addActionListener(this);        
@@ -199,10 +199,9 @@ public class ControladoresHistorial_Laboral implements ActionListener, MouseList
                         this.vtnHistoriaLaboral.jCbCodigoCargo.getSelectedItem().toString(),
                         this.vtnHistoriaLaboral.jCbCodigoOficina.getSelectedItem().toString(),
                         FormatoFecha(this.vtnHistoriaLaboral.jDateChooserFEgreso.getDate()))){
-                this.vtnHistoriaLaboral.jTableHistoriaLaboral.setModel(this.modelo.getTablaHistorial());
+                this.vtnHistoriaLaboral.jTableHistoriaLaboral.setModel(this.modelo.getTablaHistorial(this.vtnHistoriaLaboral.jTextDocumento.getText()));
                 JOptionPane.showMessageDialog(vtnHistoriaLaboral, "Historial  Creado!.");
                 this.vtnHistoriaLaboral.jTextDocumento.setText("");
-                this.vtnHistoriaLaboral.jTextNombre.setText("");
                 this.vtnHistoriaLaboral.jDateChooserFIngreso.setDateFormatString("");
                 this.vtnHistoriaLaboral.jCbCodigoCargo.setSelectedItem("");
                 this.vtnHistoriaLaboral.jCbCodigoOficina.setSelectedItem("");
@@ -212,16 +211,16 @@ public class ControladoresHistorial_Laboral implements ActionListener, MouseList
                 JOptionPane.showMessageDialog(vtnHistoriaLaboral,"Datos Incorrectos!.");
             break;
         }
-        case __ELIMINAR_HISTORIAL:{
-        if(this.modelo.EliminarHistorial(this.vtnHistoriaLaboral.jTextDocumento.getText())){
-            this.vtnHistoriaLaboral.jTableHistoriaLaboral.setModel(this.modelo.getTablaHistorial());
-            JOptionPane.showMessageDialog(vtnHistoriaLaboral, "Historial Eliminado.");
-            this.vtnHistoriaLaboral.jTextDocumento.setText("");
-            this.vtnHistoriaLaboral.jTextNombre.setText("");
-       
-             }
-          break;
-           }
+//        case __ELIMINAR_HISTORIAL:{
+//        if(this.modelo.EliminarHistorial(this.vtnHistoriaLaboral.jTextDocumento.getText())){
+//            this.vtnHistoriaLaboral.jTableHistoriaLaboral.setModel(this.modelo.getTablaHistorial(this.vtnHistoriaLaboral.jTextDocumento.getText()));
+//            JOptionPane.showMessageDialog(vtnHistoriaLaboral, "Historial Eliminado.");
+//            this.vtnHistoriaLaboral.jTextDocumento.setText("");
+//            //this.vtnHistoriaLaboral.jTextNombre.setText("");
+//       
+//             }
+//          break;
+//           }
         case __NOMBRE:{
             this.vtnHistoriaLaboral.jTextNombre.setText(this.modelo.TraerNombre(this.vtnHistoriaLaboral.jTextDocumento.getText()));
           break;

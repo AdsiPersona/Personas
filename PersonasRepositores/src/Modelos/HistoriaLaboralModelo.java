@@ -11,6 +11,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
 
 /**
  *
@@ -20,54 +21,56 @@ public class HistoriaLaboralModelo extends Conexion{
     
     
     
-    public  DefaultTableModel getTablaHistorial(String Documento){
-        MiModelo tableModel = new MiModelo();
-        int Registros = 0;
-        String[] ColumNames = {"Documento","Nombre"};
-        String sql = "SELECT count(*) as Total FROM empleados where documento = '"+Documento+"';";
-                    
-                
-        try {
-            PreparedStatement pstm = this.getConexion().prepareStatement(sql);
-            ResultSet Resultado = pstm.executeQuery();
-            Resultado.next();
-            Registros = Resultado.getInt("Total");
-            Resultado.close();                                 
-        } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, e.getMessage());
-        }
-    
-          Object[][] data = new String[Registros][3];
-          try {
-              sql = "SELECT Documento   FROM Empleados "
-                  + "where documento = '"+Documento+"';";
-              
-              PreparedStatement pstm = this.getConexion().prepareStatement(sql);
-              ResultSet resultado = pstm.executeQuery();
-              int i=0;
-              while(resultado.next()){
-                  data[i][0] = resultado.getString("Documento");
-                  data[i][1] = resultado.getString("Nombre");
-                  i++;                  
-              }
-              resultado.close();
-              
-              tableModel.setDataVector(data, ColumNames);
-          } catch (SQLException e) {
-              JOptionPane.showMessageDialog(null, e.getMessage());
-          }
-          
-          return tableModel;
-      }
+//    public  DefaultTableModel getTablaHistorial(String Documento){
+//        MiModelo tableModel = new MiModelo();
+//        int Registros = 0;
+//        String[] ColumNames = {"Documento","Nombre"};
+//        String sql = "SELECT count(*) as Total FROM empleados where documento = '"+Documento+"';";
+//                    
+//                
+//        try {
+//            PreparedStatement pstm = this.getConexion().prepareStatement(sql);
+//            ResultSet Resultado = pstm.executeQuery();
+//            Resultado.next();
+//            Registros = Resultado.getInt("Total");
+//            Resultado.close();                                 
+//        } catch (SQLException e) {
+//            JOptionPane.showMessageDialog(null, e.getMessage());
+//        }
+//    
+//          Object[][] data = new String[Registros][3];
+//          try {
+//              sql = "SELECT Documento   FROM Empleados "
+//                  + "where documento = '"+Documento+"';";
+//              
+//              PreparedStatement pstm = this.getConexion().prepareStatement(sql);
+//              ResultSet resultado = pstm.executeQuery();
+//              int i=0;
+//              while(resultado.next()){
+//                  data[i][0] = resultado.getString("Documento");
+//                  data[i][1] = resultado.getString("Nombre");
+//                  i++;                  
+//              }
+//              resultado.close();
+//              
+//              tableModel.setDataVector(data, ColumNames);
+//          } catch (SQLException e) {
+//              JOptionPane.showMessageDialog(null, e.getMessage());
+//          }
+//          
+//          return tableModel;
+//      }
+//   
    
-    public DefaultTableModel getTablaHistorial(){
+    
+        public TableModel getTablaHistorial(String documento) {
         MiModelo tableModel = new MiModelo();
        int registros = 0;
-       String[] columNames = {"Documento","Fecha Ingreso","Nombre del Cargo","Nombre de la Oficina","Fecha Egreso"};
+       String[] columNames = {"Nombre del Cargo","Nombre de la Oficina","Fecha Ingreso","Fecha Egreso"};
        
         try {
-            PreparedStatement pstm =this.getConexion().prepareStatement("SELECT "
-            + "count(*) as total FROM historial_laboral;");
+            String sql = "SELECT count(*) as total FROM historial_laboral;";
+            PreparedStatement pstm =this.getConexion().prepareStatement(sql);
             ResultSet resultado = pstm.executeQuery();
             resultado.next();
             registros = resultado.getInt("total");
@@ -76,18 +79,20 @@ public class HistoriaLaboralModelo extends Conexion{
             JOptionPane.showMessageDialog(null, e.getMessage());
         }
    
-        Object[][] data = new String[registros][5];
+        Object[][] data = new String[registros][4];
         try {
-            String sql =  "SELECT * FROM historial_laboral;";
+            String sql =  "select c.Nomb_Carg, O.Nomb_ofic, HL.Fech_ingr, HL.Fech_Egre\n" +
+                                "from Historial_laboral HL join cargos C on(HL.Codi_Carg = C.Codi_Carg) \n" +
+                                "join Oficinas O on(HL.Codi_Ofic = O.Codi_Ofic)\n" +
+                                "where HL.documento = '"+documento+"';";
             PreparedStatement pstm = this.getConexion().prepareStatement(sql);
             ResultSet resultado = pstm.executeQuery();
             int i = 0;
             while(resultado.next()){
-                data[i][0] = resultado.getString("Documento");
-                data[i][1] = resultado.getString("Fech_Ingr");
-                data[i][2] = resultado.getString("Codi_Carg");
-                data[i][3] = resultado.getString("Codi_Ofic");
-                data[i][4] = resultado.getString("Fech_Egre");
+                data[i][0] = resultado.getString("Nomb_Carg");
+                data[i][1] = resultado.getString("Nomb_Ofic");
+                data[i][2] = resultado.getString("Fech_Ingr");
+                data[i][3] = resultado.getString("Fech_Egre");
                 i++;
             }
             resultado.close();
@@ -301,4 +306,6 @@ public class HistoriaLaboralModelo extends Conexion{
             return false;
         }
     }        
+
+
 }
