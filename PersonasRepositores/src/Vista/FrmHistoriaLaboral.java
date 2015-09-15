@@ -26,8 +26,7 @@ public class FrmHistoriaLaboral extends javax.swing.JFrame {
     public FrmHistoriaLaboral() {
        initComponents();
         setLocationRelativeTo(this);
-        setSize(650, 400);
-       
+        setSize(650, 400);        
     }
     
      private void asignarFecha(){
@@ -106,7 +105,8 @@ public class FrmHistoriaLaboral extends javax.swing.JFrame {
 
         jScrollPane1.setViewportView(jTextPane1);
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Historia Laboral de Empleados");
         setResizable(false);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowOpened(java.awt.event.WindowEvent evt) {
@@ -235,13 +235,13 @@ public class FrmHistoriaLaboral extends javax.swing.JFrame {
         jLbFechaEgreso.setVisible(true);
         jLbFechaIngreso.setVisible(true);
         jLbDocumento.setVisible(true);
-        jLblNombre.setVisible(false);
+        jLblNombre.setVisible(true);
         jCbCodigoCargo.setVisible(true);
         jCbCodigoOficina.setVisible(true);
         jDateChooserFEgreso.setVisible(true);
         jDateChooserFIngreso.setVisible(true);
         jTextDocumento.setVisible(true);
-        jTextNombre.setVisible(false);       
+        jTextNombre.setVisible(true);       
         this.habilitarMenu();
     }//GEN-LAST:event_jBtnAdicionarHistorialActionPerformed
 
@@ -277,10 +277,10 @@ public class FrmHistoriaLaboral extends javax.swing.JFrame {
         jCbCodigoOficina.setVisible(false);
         jDateChooserFEgreso.setVisible(false);
         jDateChooserFIngreso.setVisible(false);
-        jLbDocumento.setVisible(false);
-        jLblNombre.setVisible(false);
-        jTextDocumento.setVisible(false);
-        jTextNombre.setVisible(false);
+//        jLbDocumento.setVisible(false);
+        jLblNombre.setVisible(true);
+//        jTextDocumento.setVisible(false);
+        jTextNombre.setEnabled(false);
         this.deshabilitarMenu();
     }//GEN-LAST:event_formWindowOpened
 

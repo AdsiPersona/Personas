@@ -128,7 +128,7 @@ public class ControladoresHistorial_Laboral implements ActionListener, MouseList
 //                this.vtnHistoriaLaboral.jLblNombre.setVisible(true);
 //                this.vtnHistoriaLaboral.jTextDocumento.setVisible(true);
 //                this.vtnHistoriaLaboral.jTextNombre.setVisible(true);
-                
+                this.vtnHistoriaLaboral.jTextDocumento.requestFocus();
                 this.vtnHistoriaLaboral.jTableHistoriaLaboral.setModel(this.modelo.
                             getTablaHistorial(this.vtnHistoriaLaboral.jTextNombre.getText()));                                                         
                     break; 
@@ -153,7 +153,7 @@ public class ControladoresHistorial_Laboral implements ActionListener, MouseList
                 
             
                 this.vtnHistoriaLaboral.jTextDocumento.setEditable(true);
-                this.vtnHistoriaLaboral.jTextNombre.setEditable(true);
+//                this.vtnHistoriaLaboral.jTextNombre.setEditable(true);
                 this.vtnHistoriaLaboral.jDateChooserFIngreso.setEnabled(true);
                 this.vtnHistoriaLaboral.jCbCodigoCargo.setEditable(true);
                 this.vtnHistoriaLaboral.jCbCodigoOficina.setEditable(true);

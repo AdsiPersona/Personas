@@ -63,7 +63,7 @@ public class HistoriaLaboralModelo extends Conexion{
     public DefaultTableModel getTablaHistorial(){
         MiModelo tableModel = new MiModelo();
        int registros = 0;
-       String[] columNames = {"Documento","Fech_Ingr","Codi_Carg","Codi_Ofic","Fech_Egre"};
+       String[] columNames = {"Documento","Fecha Ingreso","Codigo del Cargo","Codigo de la Oficina","Fecha Egreso"};
        
         try {
             PreparedStatement pstm =this.getConexion().prepareStatement("SELECT "
