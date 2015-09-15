@@ -241,7 +241,9 @@ public class FrmHistoriaLaboral extends javax.swing.JFrame {
         jDateChooserFEgreso.setVisible(true);
         jDateChooserFIngreso.setVisible(true);
         jTextDocumento.setVisible(true);
-        jTextNombre.setVisible(true);       
+        jTextNombre.setVisible(true);  
+        jBtnVerHisorial.setEnabled(false);
+        jBtnAgregarHistorial.setEnabled(true);
         this.habilitarMenu();
     }//GEN-LAST:event_jBtnAdicionarHistorialActionPerformed
 
@@ -255,6 +257,9 @@ public class FrmHistoriaLaboral extends javax.swing.JFrame {
         jCbCodigoOficina.setVisible(false);
         jDateChooserFEgreso.setVisible(false);
         jDateChooserFIngreso.setVisible(false);
+        jBtnAgregarHistorial.setEnabled(false);
+        jBtnAdicionarHistorial.setEnabled(false);
+        jBtnEliminarHistorial.setEnabled(true);
         this.deshabilitarMenu();
     }//GEN-LAST:event_jBtnAgregarHistorialActionPerformed
 
@@ -264,6 +269,7 @@ public class FrmHistoriaLaboral extends javax.swing.JFrame {
         jLblNombre.setVisible(true);
         jTextDocumento.setVisible(true);
         jTextNombre.setVisible(true);
+        jBtnAdicionarHistorial.setEnabled(true);
         
     }//GEN-LAST:event_jBtnVerHisorialActionPerformed
 
@@ -281,11 +287,18 @@ public class FrmHistoriaLaboral extends javax.swing.JFrame {
         jLblNombre.setVisible(true);
 //        jTextDocumento.setVisible(false);
         jTextNombre.setEnabled(false);
+        jBtnVerHisorial.setEnabled(true);
+        jBtnAdicionarHistorial.setEnabled(false);
+        jBtnAgregarHistorial.setEnabled(false);
+        jBtnEliminarHistorial.setEnabled(false);
         this.deshabilitarMenu();
+        
     }//GEN-LAST:event_formWindowOpened
 
     private void jTextDocumentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextDocumentoActionPerformed
         // TODO add your handling code here:
+        jBtnAdicionarHistorial.setEnabled(true);
+        jBtnAgregarHistorial.setEnabled(true);
     }//GEN-LAST:event_jTextDocumentoActionPerformed
 
     private void jTextDocumentoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextDocumentoKeyTyped

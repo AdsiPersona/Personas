@@ -63,7 +63,7 @@ public class HistoriaLaboralModelo extends Conexion{
     public DefaultTableModel getTablaHistorial(){
         MiModelo tableModel = new MiModelo();
        int registros = 0;
-       String[] columNames = {"Documento","Fecha Ingreso","Codigo del Cargo","Codigo de la Oficina","Fecha Egreso"};
+       String[] columNames = {"Documento","Fecha Ingreso","Nombre del Cargo","Nombre de la Oficina","Fecha Egreso"};
        
         try {
             PreparedStatement pstm =this.getConexion().prepareStatement("SELECT "
@@ -110,11 +110,10 @@ public class HistoriaLaboralModelo extends Conexion{
                 sql = "insert into historial_laboral(Documento, Fech_Ingr, Codi_Carg, Codi_Ofic, Fech_Egre) values('"+Documento+"','"+Fech_Ingr+"','"+CodigoC+"','"+CodigoO+"','"+Fech_Egre+"');";
             }
             
-            System.out.println(sql);
       
           
                     
-            JOptionPane.showMessageDialog(null, sql);
+//            JOptionPane.showMessageDialog(null, sql);
             
             try {
                 PreparedStatement pstm = this.getConexion().prepareStatement(sql);
@@ -224,7 +223,7 @@ public class HistoriaLaboralModelo extends Conexion{
         String sql = "select Codi_Ofic from oficinas where Nomb_Ofic = '"
                 +Nomb_Ofic+"';";
         
-        JOptionPane.showMessageDialog(null, "Sentencia sql: "+sql);
+//        JOptionPane.showMessageDialog(null, "Sentencia sql: "+sql);
         
         try{
             PreparedStatement sentencia = this.getConexion().prepareStatement(sql);
@@ -237,8 +236,8 @@ public class HistoriaLaboralModelo extends Conexion{
             JOptionPane.showMessageDialog(null, e.getMessage());
         }         
         
-        JOptionPane.showMessageDialog(null, "Código retornado: "+oficina);
-        
+//        JOptionPane.showMessageDialog(null, "Código retornado: "+oficina);
+//        
         return oficina;
         }
 
