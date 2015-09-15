@@ -57,7 +57,8 @@ public class FrmHistoriaLaboral extends javax.swing.JFrame {
                     
                  
              }catch (ParseException ex){
-             Logger.getLogger(FrmHistoriaLaboral.class.getName()).log(Level.SEVERE,null, ex);
+                 JOptionPane.showMessageDialog(jTextDocumento, "No ha seleccionado ninguna fecha!!");
+             //Logger.getLogger(FrmHistoriaLaboral.class.getName()).log(Level.SEVERE,null, ex);
          }
          } 
     
@@ -208,6 +209,12 @@ public class FrmHistoriaLaboral extends javax.swing.JFrame {
         jTextDocumento.setBounds(120, 10, 170, 20);
         getContentPane().add(jDateChooserFEgreso);
         jDateChooserFEgreso.setBounds(450, 70, 170, 20);
+
+        jDateChooserFIngreso.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                jDateChooserFIngresoPropertyChange(evt);
+            }
+        });
         getContentPane().add(jDateChooserFIngreso);
         jDateChooserFIngreso.setBounds(120, 70, 170, 20);
 
@@ -323,10 +330,15 @@ public class FrmHistoriaLaboral extends javax.swing.JFrame {
 
     private void jBtnAgregarHistorialMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBtnAgregarHistorialMouseEntered
         // TODO add your handling code here:        
-        if(jTextDocumento.getText().length() > 0 && jDateChooserFIngreso.getDate().toString().equals("null")){
-            this.jBtnAgregarHistorial.setEnabled(true);
-        }
+//        if(jTextDocumento.getText().length() > 0 && jDateChooserFIngreso.getDate().toString().equals("null")){
+//            this.jBtnAgregarHistorial.setEnabled(true);
+//        }
     }//GEN-LAST:event_jBtnAgregarHistorialMouseEntered
+
+    private void jDateChooserFIngresoPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jDateChooserFIngresoPropertyChange
+        // TODO add your handling code here:
+        this.jBtnAgregarHistorial.setEnabled(true);
+    }//GEN-LAST:event_jDateChooserFIngresoPropertyChange
 
     /**
      * @param args the command line arguments
