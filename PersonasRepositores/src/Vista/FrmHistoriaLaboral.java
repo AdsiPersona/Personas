@@ -338,6 +338,12 @@ public class FrmHistoriaLaboral extends javax.swing.JFrame {
     private void jDateChooserFIngresoPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jDateChooserFIngresoPropertyChange
         // TODO add your handling code here:
         this.jBtnAgregarHistorial.setEnabled(true);
+        java.util.Date fecha = new Date();        
+        if (this.jDateChooserFIngreso.getDate()!=null){
+            if (fecha.before(this.jDateChooserFIngreso.getDate())){
+             this.jDateChooserFIngreso.setDate(fecha);
+            }
+        }
     }//GEN-LAST:event_jDateChooserFIngresoPropertyChange
 
     /**
