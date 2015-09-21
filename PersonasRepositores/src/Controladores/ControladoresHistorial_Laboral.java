@@ -154,10 +154,10 @@ public class ControladoresHistorial_Laboral implements ActionListener, MouseList
             
                 this.vtnHistoriaLaboral.jTextDocumento.setEditable(true);
 //                this.vtnHistoriaLaboral.jTextNombre.setEditable(true);
-                this.vtnHistoriaLaboral.jDateChooserFIngreso.setEnabled(true);
+                this.vtnHistoriaLaboral.jDateChooserFIngreso.setVisible(true);
                 this.vtnHistoriaLaboral.jCbCodigoCargo.setEditable(true);
                 this.vtnHistoriaLaboral.jCbCodigoOficina.setEditable(true);
-                this.vtnHistoriaLaboral.jDateChooserFEgreso.setEnabled(true);
+                this.vtnHistoriaLaboral.jDateChooserFEgreso.setVisible(true);
                 this.vtnHistoriaLaboral.jTextDocumento.requestFocus();
 //                this.vtnHistoriaLaboral.jTextNombre.setText("");
 ////                this.vtnHistoriaLaboral.jDateChooserFIngreso.setDateFormatString("");

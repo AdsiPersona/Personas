@@ -13,6 +13,7 @@ import java.util.GregorianCalendar;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 
 /**
  *
@@ -27,7 +28,7 @@ public class FrmHistoriaLaboral extends javax.swing.JFrame {
        initComponents();
         setLocationRelativeTo(this);
         setSize(650, 400); 
-        this.jBtnAgregarHistorial.setEnabled(false);
+        this.jBtnAgregarHistorial.setEnabled(false);     
     }
     
      private void asignarFecha(){
@@ -182,7 +183,7 @@ public class FrmHistoriaLaboral extends javax.swing.JFrame {
 
         jLbCodigoOficina.setText("Oficina: ");
         getContentPane().add(jLbCodigoOficina);
-        jLbCodigoOficina.setBounds(350, 44, 40, 14);
+        jLbCodigoOficina.setBounds(350, 44, 60, 14);
 
         jLblNombre.setText("Nombre: ");
         getContentPane().add(jLblNombre);
@@ -337,6 +338,8 @@ public class FrmHistoriaLaboral extends javax.swing.JFrame {
 
     private void jDateChooserFIngresoPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jDateChooserFIngresoPropertyChange
         // TODO add your handling code here:
+        ((JTextField)this.jDateChooserFIngreso.getDateEditor().getUiComponent()).setEditable(false);
+        ((JTextField)this.jDateChooserFEgreso.getDateEditor().getUiComponent()).setEditable(false);
         this.jBtnAgregarHistorial.setEnabled(true);
         java.util.Date fecha = new Date();        
         if (this.jDateChooserFIngreso.getDate()!=null){
