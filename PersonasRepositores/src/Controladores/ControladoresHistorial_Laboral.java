@@ -128,9 +128,9 @@ public class ControladoresHistorial_Laboral implements ActionListener, MouseList
 //                this.vtnHistoriaLaboral.jLblNombre.setVisible(true);
 //                this.vtnHistoriaLaboral.jTextDocumento.setVisible(true);
 //                this.vtnHistoriaLaboral.jTextNombre.setVisible(true);
-                this.vtnHistoriaLaboral.jTextDocumento.requestFocus();
-                this.vtnHistoriaLaboral.jTableHistoriaLaboral.setModel(this.modelo.
-                            getTablaHistorial(this.vtnHistoriaLaboral.jTextNombre.getText()));                                                         
+               this.vtnHistoriaLaboral.jTableHistoriaLaboral.setModel(this.modelo.getTablaHistorial
+                    (this.vtnHistoriaLaboral.jTextDocumento.getText()));
+                this.vtnHistoriaLaboral.jTableHistoriaLaboral.requestFocus();                                                
                     break; 
                 
             }
